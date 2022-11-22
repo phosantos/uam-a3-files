@@ -1,0 +1,628 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto&family=Roboto+Slab&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #F5F5F5;
+}
+
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  flex: 1;
+}
+
+.header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+
+.header h1 {
+  font-family: 'Poppins';
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: black;
+}
+
+@media (max-width: 450px) {
+  .header h1 {
+    font-size: 1.3rem;
+  }
+}
+
+.header h1 a {
+  color: black;
+}
+
+.intro {
+  padding: 2rem 0;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.intro h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+}
+
+.intro p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: .5rem;
+}
+
+.intro .socials {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.intro .twitter,.intro .email,.intro .linkedin,.intro .github {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (max-width: 450px) {
+  .intro h1 {
+    font-size: 1.3rem;
+  }
+  .intro .twitter,.intro .email,.intro .linkedin,.intro .github {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.twitter {
+  background-image: url("../assets/twitter.svg");
+}
+
+.email {
+  background-image: url("../assets/mail.svg");
+}
+
+.linkedin {
+  background-image: url("../assets/linkedin.svg");
+}
+
+.github {
+  background-image: url("../assets/github.svg");
+}
+
+.profile-wrapper {
+  width: 100px;
+  height: 100px;
+  background-image: url("../assets/profile.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+
+.profile-wrapper::after {
+
+}
+
+.posts {
+  display: grid;
+  gap: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  width: 100%;
+  flex: 1;
+}
+
+.post {
+  line-height: 1.3;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.post .title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-top: 10px;
+  color: #191919;
+}
+
+.post .subheading {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+.post .date {
+  display: block;
+  font-size: .875rem;
+  font-family: 'Poppins';
+  font-weight: 700;
+  color: #666;
+  margin-top: 10px;
+}
+
+.post > a:hover .title {
+  color: black;
+}
+
+.post > a:hover .title {
+  text-decoration: underline;
+}
+
+@media (max-width: 450px) {
+  .post .title {
+    font-size: 1.1rem;
+  }
+
+  .post .subheading {
+    font-size: .9rem;
+  }
+}
+
+.btn {
+  color: white;
+  padding: .6rem 1.2rem;
+  transition: .2s;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  background-color: #191919;
+  border-radius: 1.2rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: black;
+}
+
+footer {
+  border-top: 1px solid black;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.copy {
+  text-align: center;
+  font-size: .875rem;
+}
+
+.newsletter {
+  display: flex;
+  max-width: 800px;
+  gap: 1rem;
+  padding: 2rem 20px;
+}
+
+
+.newsletter label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+}
+
+.newsletter > div {
+  display: grid;
+  width: 100%;
+  gap: .5rem;
+  position: relative;
+}
+
+.newsletter input {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  padding: .8rem 1rem;
+  border: 1px solid #666;
+  border-radius: 1rem;
+  background-color: #F5F5F5;
+}
+
+.newsletter input:focus {
+  outline: none;
+  border: 1px solid #191919;
+}
+
+.newsletter .btn {
+  margin-bottom: .5rem;
+  margin: 0 0 .5rem auto;
+}
+
+.newsletter .error {
+  background-color: #FFEBED;
+  padding: .5rem 1rem;
+  border-radius: 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color: red;
+  text-align: center;
+  margin-top: .5rem;
+  display: none;
+  position: absolute;
+  top: -50px;
+  display: none;
+}
+
+.newsletter .error.active {
+  display: inline;
+}
+
+@media (max-width: 750px){
+  .newsletter {
+    display: grid;
+    max-width: 400px;
+  }
+
+  .newsletter .btn {
+    margin-bottom: .5rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px){
+  .newsletter {
+    padding-top: 0;
+    padding-bottom: 1rem;
+  }
+
+  .newsletter label {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .newsletter input {
+    font-size: 1rem;
+    padding: .5rem 1rem;
+  }
+}
+
+footer strong {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* admin - index */
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.logout {
+  font-size: .875rem;
+  border: none;
+  color: black;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: #F5F5F5;
+  padding: .5rem 1rem;
+  border-radius: 1rem;
+  border: 1px solid #191919;
+  font-weight: 600;
+  transition: .2s;
+}
+
+.logout:hover {
+  color: white;
+  background-color: #191919;
+}
+
+.posts-header {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.posts-header h1 {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.admin.posts .post h1::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../assets/create.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+.post > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post .delete {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: none;
+  gap: 5px;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: .2s;
+}
+
+.post .delete svg{
+  width: 20px;
+  height: 20px;
+}
+
+.post .delete:hover {
+  color: red;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.profile > div {
+  display: flex;
+  align-items: center;
+}
+
+.profile img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+@media (max-width: 600px) {
+  .header .container {
+    display: grid;
+    gap: 1rem;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .profile {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 450px) {
+  .posts-header h1 {
+    font-size: 1.3rem;
+  }
+
+  .post .delete {
+    font-size: .875rem;
+  }
+
+  .post .delete svg {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .admin.posts .post h1::before {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+/* admin - editor */
+
+.editor {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  display: flex;
+  gap: .5rem;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  justify-items: end;
+}
+
+.editor #title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  padding: .5rem 1rem;
+}
+
+.editor #subheading {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  padding: .5rem 1rem;
+}
+
+.editor #content {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+  font-size: 1rem;
+  padding: .5rem 1rem;
+  resize: none;
+  min-height: 100%;
+  flex: 1;
+  line-height: 1.3;
+}
+
+#title, #subheading, #content {
+  border-radius: 1rem;
+  border: 1px solid #666;
+  background-color: #F5F5F5;
+}
+
+#title:focus, #subheading:focus, #content:focus {
+  outline: none;
+  border: 1px solid #191919;
+}
+
+.editor .btn {
+  margin-bottom: .5rem;
+  margin: 0 0 .5rem auto;
+}
+
+/* single post */
+
+.single-post {
+  line-height: 1.3;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.single-post header > div {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  opacity: .8;
+}
+
+.single-post h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: black;
+  margin-top: .5rem;
+}
+
+.single-post h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+.single-post .content {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+  font-family: 'Roboto Slab';
+  line-height: 1.5;
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+.single-post h3, .single-post h4 {
+  font-family: 'Roboto', sans-serif;
+  margin-top: 1rem;
+}
+
+.single-post a {
+  color: blue;
+}
+
+.single-post code {
+  font-family: monospace;
+  background-color: #191919;
+  color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.share {
+  display: flex;
+  gap: .5rem;
+  margin-bottom: 1rem;
+  justify-content: right;
+}
+
+.facebook, .twitter, .link {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../assets/facebook.svg");
+  background-position: center;
+  background-size: cover;
+}
+
+.twitter {
+  background-image: url("../assets/twitter.svg");
+}
+
+.link {
+  background-image: url("../assets/link.svg");
+}
+
+/* login */
+
+.loginForm {
+  display: grid;
+  max-width: 400px;
+  padding: 4rem 20px;
+  margin: 0 auto;
+}
+
+.loginForm label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: .5rem;
+}
+
+.loginForm input {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  padding: .8rem 1rem;
+  border: 1px solid #666;
+  border-radius: 1rem;
+  background-color: #F5F5F5;
+  margin-bottom: 1rem;
+}
+
+.loginForm input:focus {
+  outline: none;
+  border: 1px solid #191919;
+}
+
+.loginForm .btn {
+  margin-bottom: .5rem;
+  /* margin: 0 0 .5rem auto; */
+}
+
+.loginForm .error {
+  background-color: #FFEBED;
+  padding: .8rem 1rem;
+  border-radius: 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color: red;
+  text-align: center;
+  margin-top: .5rem;
+  display: none;
+}
+
+.loginForm .error.active {
+  display: block;
+}

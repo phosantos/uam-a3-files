@@ -1,0 +1,5 @@
+Pedro Henrique de Oliveira Santos 125111345190
+Felipe Lichtenecker Prado Rodrigues Alves 125111362493
+João Pedro Hudson Martins 125111350830
+
+Configurae=r variáveis de ambiente em .env
